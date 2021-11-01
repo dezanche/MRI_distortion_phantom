@@ -9,6 +9,7 @@ After scanning the volume occupied by the phantom, export the volume in DICOM fo
 ### 1. Data Import
 - DICOM browser module: select series and load
 - Volume rendering module: display preset > MRI MIP > adjust "shift" to see cloud of dots
+![MIP](https://github.com/dezanche/MRI_distortion_phantom/blob/main/Images/Screenshots/2021-10-29-Scene_801_MIP.png)
 
 ### 2. Segment
 - Segment editor module: add segment > threshold > set threshold* > apply > show 3D \
@@ -17,6 +18,7 @@ then clean up using
 - Segment editor module: islands > Split islands to segments> set min size > apply \
 (min size 50 voxels)
 - (optional) clean up manually by excluding segments corresponding to, e.g., noise, artefacts, central sample, etc.
+![segmentation](https://github.com/dezanche/MRI_distortion_phantom/blob/main/Images/Screenshots/2021-10-29-Scene_801_segment.png)
 
 ### 3. Calculate Centroid of Each Segment
 - following the methods in (https://discourse.slicer.org/t/centroid-determination/3541) paste the following code into Slicer's Python Interactor:
@@ -55,6 +57,7 @@ If some rotation and translation are needed to align the 2 sets of fiducials pro
 - adjust translation and rotation sliders to get the 2 sets aligned
 - to make the changes permanent: Data module > Transform hierarchy tab > right click on the transform > "harden transform"
 - save transformed coordinates to FCSV file if desired
+![fiducials](https://github.com/dezanche/MRI_distortion_phantom/blob/main/Images/Screenshots/2021-11-01-Scene_801_fiducials.png)
 
 ### 6. Calculate Displacements
 The following code (paste into Slicer's Python Interactor) calculates displacements between each measured centroid and the corresponding known coordinates, discards pairs more than `maxDistance` apart, and writes the results in a table.
@@ -109,4 +112,6 @@ The data in the table can be saved to a TSV file and analyzed using other softwa
 - Series tab > select Data Series, Plot Type > Scatter, Input Table > Coordinates and Displacements
 - choose X and Y Axis columns (e.g., *rho* and *displacement*, respectively)
 - Line Style > none
-- if not visible, display the plot window by clicking the eye in the Charts tab or main menu: View > Layout > 3D Table
+- if not visible, display the plot window by clicking the eye in the Charts tab\
+or main menu: View > Layout > 3D Table
+![scatter](https://github.com/dezanche/MRI_distortion_phantom/blob/main/Images/Screenshots/2021-11-01-Scene_801_scatter.png)
