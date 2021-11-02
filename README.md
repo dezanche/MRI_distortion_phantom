@@ -1,12 +1,12 @@
 # MRI_distortion_phantom
 
-This work describes a large-volume, lightweight, modular phantom with solid signal sources used to measure distortion in magnetic resonance imaging (MRI) systems. Please note that image distortion can depend on variables such as sequence parameters and magnetic field (B<sub>0</sub>) homogeneity.
+This modular phantom uses solid signal sources to measure distortion in magnetic resonance imaging (MRI) systems. Its large volume and light weight make it practical for applications such as radiation therapy where accurate patient contours are critical for treatment planning. Please note that image distortion can depend on variables such as sequence parameters and magnetic field (B<sub>0</sub>) homogeneity.
 This repository contains detailed information to support a scientific abstract submitted to the [2022 ISMRM conference](https://www.ismrm.org/22m/).
   
 ## Contents
-CAD contains CAD files describing the phantom as built\
-  Images contains screenshots and photographs\
-  Code contains software for processing data obtained with the phantom
+CAD contains CAD files describing the phantom as built.\
+Images contains screenshots and photographs.\
+Support_files contains software and other files used for processing data obtained with the phantom.
 
 ## Data Processing Using 3D Slicer
 
@@ -27,7 +27,7 @@ then clean up using
 ![segmentation](https://github.com/dezanche/MRI_distortion_phantom/blob/main/Images/Screenshots/2021-10-29-Scene_801_segment.png)
 
 ### 3. Calculate Centroid of Each Segment
-- following the methods in (https://discourse.slicer.org/t/centroid-determination/3541) paste the following code into Slicer's Python Interactor:
+- following the methods in (https://discourse.slicer.org/t/centroid-determination/3541) copy and paste the following code into Slicer's Python Interactor:
 ```python
 segmentationNode = getNode("Segmentation")  # or whatever name was given to the segmentation
 # Compute centroids
@@ -121,3 +121,7 @@ The data in the table can be saved to a TSV file and analyzed using other softwa
 - if not visible, display the plot window by clicking the eye in the Charts tab\
 or main menu: View > Layout > 3D Table
 ![scatter](https://github.com/dezanche/MRI_distortion_phantom/blob/main/Images/Screenshots/2021-11-01-Scene_801_scatter.png)
+
+## Data Processing Using Matlab
+The acquired data can also be processed in Matlab using ??
+Please note that this code will not run in [GNU Octave](https://www.gnu.org/software/octave/) because a couple of critical functions used in the script are still unavailable.
