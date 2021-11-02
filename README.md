@@ -17,7 +17,8 @@ The support structure consists of stacked polypropylene sheets, 3.3 mm thick and
 The present configuration uses 11 sheets with 11⨉18 holes, for a possible 2178 sample locations.
 Slotted side panels can be added to increase flexural, torsional, and shear stiffness.
 Three rows from the edges of the boards were populated with 1386 beads to allow a 25 mm ⌀ container filled with ~12 mL of petroleum jelly to be placed at the centre of the phantom for automatic flip angle and frequency calibration. More positions can be populated if desired.\
-**ADD IMAGE OF PHANTOM**
+![scanner](https://github.com/dezanche/MRI_distortion_phantom/blob/main/Images/Photos/20211028_103933.jpg)
+**ADD Rendering and close-up photo OF PHANTOM**
 
 ## Data Processing Using 3D Slicer 
 
@@ -127,12 +128,12 @@ tableView.show()
 The data in the table can be saved to a TSV file and analyzed using other software, or plotted directly in 3D Slicer as follows.
 - Plots module > Charts tab > Create New Plotchart, Create New Plotseries
 - Series tab > select Data Series, Plot Type > Scatter, Input Table > Coordinates and Displacements
-- choose X and Y Axis columns (e.g., *rho* and *displacement*, respectively)
+- choose X and Y Axis columns (e.g., the radial coordinate *rho* and *displacement* magnitude, respectively, in the example below)
 - Line Style > none
 - if not visible, display the plot window by clicking the eye in the Charts tab\
 or main menu: View > Layout > 3D Table
 ![scatter](https://github.com/dezanche/MRI_distortion_phantom/blob/main/Images/Screenshots/2021-11-01-Scene_801_scatter.png)
 
 ## Data Processing Using Matlab
-The acquired data can also be processed in Matlab using ??
-Please note that this code will not run in [GNU Octave](https://www.gnu.org/software/octave/) because a couple of critical functions used in the script are still unavailable.
+The acquired data can also be processed in Matlab using [Distortion_Analysis.m](./blob/main/Support_files/Distortion_Analysis.m).
+Please note that this code will not run in [GNU Octave](https://www.gnu.org/software/octave/) because a couple of critical functions used in the script are not available in Octave toolboxes.
