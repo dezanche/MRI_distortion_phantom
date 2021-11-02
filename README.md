@@ -1,14 +1,19 @@
 # MRI_distortion_phantom
 
 This modular phantom uses solid signal sources to measure distortion in magnetic resonance imaging (MRI) systems. Its large volume and light weight make it practical for applications such as radiation therapy where accurate patient contours are critical for treatment planning. Please note that image distortion can depend on variables such as sequence parameters and magnetic field (B<sub>0</sub>) homogeneity.
-This repository contains detailed information to support a scientific abstract submitted to the [2022 ISMRM conference](https://www.ismrm.org/22m/).
+This repository contains detailed information in addition to the scientific abstract submitted to the [2022 ISMRM conference](https://www.ismrm.org/22m/).
   
 ## Contents
-CAD contains CAD files describing the phantom as built.\
-Images contains screenshots and photographs.\
-Support_files contains software and other files used for processing data obtained with the phantom.
+[CAD](./tree/main/CAD) contains CAD files describing the phantom as built.\
+[Images](./tree/main/Images) contains screenshots and photographs.\
+[Support_files](./tree/main/Support_files) contains software and other files used for processing data obtained with the phantom.\
+[Construction](#construction) describes how the phantom is designed and built.\
+Images acquired using the phantom can be processed to analyze the distortion using both [3D Slicer](#data processing using 3d slicer) and [Matlab](#data-processing-using-matlab].
 
-## Data Processing Using 3D Slicer
+## Construction
+
+
+## Data Processing Using 3D Slicer 
 
 After scanning the volume occupied by the phantom, export the volume in DICOM format and analyze in [3D Slicer](https://www.slicer.org/) as follows.
 
@@ -22,7 +27,7 @@ After scanning the volume occupied by the phantom, export the volume in DICOM fo
 (adjust low range of threshold while viewing RGY screens: start high and lower it to see beads but minimize noise and artefacts) \
 then clean up using
 - Segment editor module: islands > Split islands to segments> set min size > apply \
-(min size 50 voxels)
+(e.g., min size 50 voxels)
 - (optional) clean up manually by excluding segments corresponding to, e.g., noise, artefacts, central sample, etc.
 ![segmentation](https://github.com/dezanche/MRI_distortion_phantom/blob/main/Images/Screenshots/2021-10-29-Scene_801_segment.png)
 
