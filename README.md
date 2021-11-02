@@ -1,6 +1,12 @@
 # MRI_distortion_phantom
 
-These files describe a large-volume, lightweight, modular phantom with solid signal sources used to measure distortion in magnetic resonance imaging (MRI) systems. Please note that image distortion can depend on variables such as sequence parameters and magnetic field (B_0) homogeneity.
+This work describes a large-volume, lightweight, modular phantom with solid signal sources used to measure distortion in magnetic resonance imaging (MRI) systems. Please note that image distortion can depend on variables such as sequence parameters and magnetic field (B<sub>0</sub>) homogeneity.
+This repository contains detailed information to support a scientific abstract submitted to the [2022 ISMRM conference](https://www.ismrm.org/22m/).
+  
+## Contents
+CAD contains CAD files describing the phantom as built\
+  Images contains screenshots and photographs\
+  Code contains software for processing data obtained with the phantom
 
 ## Data Processing Using 3D Slicer
 
