@@ -18,7 +18,7 @@ The present configuration uses 11 sheets with 11⨉18 holes, for a possible 2178
 Slotted side panels can be added to increase flexural, torsional, and shear stiffness.
 Three rows from the edges of the boards were populated with 1386 beads to allow a 25 mm ⌀ container filled with ~12 mL of petroleum jelly to be placed at the centre of the phantom for automatic flip angle and frequency calibration. More positions can be populated if desired.\
 ![scanner](https://github.com/dezanche/MRI_distortion_phantom/blob/main/Images/Photos/20211028_103933.jpg)
-**ADD Rendering and close-up photo OF PHANTOM**
+![rendering](https://github.com/dezanche/MRI_distortion_phantom/blob/main/Images/Screenshots/phantom_rendering.png)
 
 ## Data Processing Using 3D Slicer 
 
@@ -123,6 +123,7 @@ tableView=slicer.qMRMLTableView()
 tableView.setMRMLTableNode(tableNode)
 tableView.show()
 ```
+![table](https://github.com/dezanche/MRI_distortion_phantom/blob/main/Images/Screenshots/table.png)
 
 ### 7. Plot Results
 The data in the table can be saved to a TSV file and analyzed using other software, or plotted directly in 3D Slicer as follows.
