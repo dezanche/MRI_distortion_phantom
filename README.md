@@ -1,7 +1,7 @@
-# MRI_distortion_phantom
+# MRI Distortion Phantom
 
 This modular phantom uses solid signal sources to measure distortion in magnetic resonance imaging (MRI) systems. Its large volume and light weight make it practical for applications such as radiation therapy where accurate patient contours are critical for treatment planning. Please note that image distortion can depend on variables such as sequence parameters and magnetic field (B<sub>0</sub>) homogeneity.
-This repository contains detailed information in addition to the scientific abstract submitted to the [2022 ISMRM conference](https://www.ismrm.org/22m/).
+This repository contains detailed information in addition to the scientific abstract presented at the [2022 ISMRM conference](https://www.ismrm.org/22m/) (#5032).
   
 ## Contents
 [CAD](https://github.com/dezanche/MRI_distortion_phantom/blob/main/CAD) contains CAD files describing the phantom as built.\
